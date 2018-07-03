@@ -34,7 +34,7 @@ class AddBookUI(QMainWindow):
            
             self.setWindowTitle("Add Books")
             self.setGeometry(self.left, self.top, self.width, self.height)
-            self.show()
+            
             
     def add_book(self):
             book = self.bookname.text();
@@ -48,7 +48,4 @@ class AddBookUI(QMainWindow):
             self.bookname.clear()
             self.author.clear()
             
-app = QApplication(sys.argv)
-ex = AddBookUI()
-sys.exit(app.exec_())
     

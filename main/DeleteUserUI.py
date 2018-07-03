@@ -6,7 +6,7 @@ from config import Session
 from tables import User
 from _mysql import result
 
-class DeleteBookUI(QWidget):
+class DeleteUserUI(QWidget):
     session=Session()
     def __init__(self):
         super().__init__()
@@ -29,7 +29,6 @@ class DeleteBookUI(QWidget):
         self.setLayout(self.layout) 
  
         # Show widget
-        self.show()
  
     def createTable(self):
         users=self.session.query(User).all()
@@ -68,7 +67,3 @@ class DeleteBookUI(QWidget):
                 except:
                     print("Error while deleting the user")
  
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = DeleteBookUI()
-    sys.exit(app.exec_())

@@ -53,7 +53,7 @@ class AddUserUI(QMainWindow):
        
         self.setWindowTitle("Add Users")
         self.setGeometry(self.left, self.top, self.width, self.height)
-        self.show()
+        
         
     def add_user(self):
         uname = self.username.text();
@@ -68,7 +68,5 @@ class AddUserUI(QMainWindow):
         self.statusBar().showMessage("User Saved Successfully")
             
         
-app = QApplication(sys.argv)
-ex = AddUserUI()
-sys.exit(app.exec_())
+
 

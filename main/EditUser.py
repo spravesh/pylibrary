@@ -82,7 +82,7 @@ class EditUserUI(QWidget):
         self.setLayout(self.layout) 
  
         # Show widget
-        self.show()
+    
  
     def createTable(self):
         users=self.session.query(User).all()
@@ -118,7 +118,3 @@ class EditUserUI(QWidget):
                 self.editWindow.show()
                 #show the window
  
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = EditUserUI()
-    sys.exit(app.exec_())

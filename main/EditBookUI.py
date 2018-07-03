@@ -71,7 +71,6 @@ class EditBookUI(QWidget):
         self.setLayout(self.layout) 
  
         # Show widget
-        self.show()
  
     def createTable(self):
         books=self.session.query(Book).all()
@@ -107,7 +106,3 @@ class EditBookUI(QWidget):
                 self.editWindow.show()
                 #show the window
  
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = EditBookUI()
-    sys.exit(app.exec_())
